@@ -13,14 +13,10 @@ public class TodoList {
     }
 
     public void print() {
-       for(int i = 0; i < this.todoList.size(); i++) {
-
-        System.out.println((i + 1) + ": " + this.todoList.get(i));
-       }
-    }
-
-    public int getListSize() {
-        return this.todoList.size();
+        for(int i = 0; i < this.todoList.size(); i++) {
+            int number = i + 1;
+            System.out.println(number + ": " + this.todoList.get(i));
+        }
     }
 
     public void remove(int number) {
@@ -28,4 +24,8 @@ public class TodoList {
 
         this.todoList.remove(indexToRemove);
     }
+    
 }
+
+
+

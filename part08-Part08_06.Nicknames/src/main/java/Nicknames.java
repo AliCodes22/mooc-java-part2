@@ -1,5 +1,4 @@
-
-import java.util.HashMap;
+import java.util.HashMap;   
 
 public class Nicknames {
 
@@ -12,6 +11,7 @@ public class Nicknames {
         nicknames.put("arthur", "artie");
 
         System.out.println(nicknames.get("matthew"));
+
 
 
     }
