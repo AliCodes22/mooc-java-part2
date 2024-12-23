@@ -51,30 +51,23 @@ public class SimpleDate {
         return this.year - other.year - yearRemoved;
     }
 
+
     @Override
     public boolean equals(Object object) {
-
-        // check if both objects are identical
         if(this == object) {
             return true;
         }
 
-        // check if the object being compared is an instance of this object
-        if(!(object instanceof SimpleDate)) {
-            return false;
-        }
+        
 
-
-        // if not then convert it 
+        // convert compared object with Simple Date object
         SimpleDate comparedDate = (SimpleDate) object;
 
-
-        // after converting, check if its properties are the same
         if(this.day == comparedDate.day && this.month == comparedDate.month && this.year == comparedDate.year) {
             return true;
         }
 
         return false;
     }
-
+   
 }
