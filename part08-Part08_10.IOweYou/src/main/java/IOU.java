@@ -12,15 +12,7 @@ public class IOU {
     }
 
     public double howMuchDoIOweTo(String toWhom) {
-        boolean isFound = false;
-
-        if(this.list.get(toWhom) != null) {
-             isFound = true;
-            return this.list.get(toWhom);
-        }
-
-       
-        return 0.0;
+        return this.list.getOrDefault(toWhom,0.0);
     }
 
 }
