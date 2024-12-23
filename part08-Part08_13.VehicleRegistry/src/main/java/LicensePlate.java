@@ -8,23 +8,17 @@ public class LicensePlate {
     // that once set, their value can't be changed
     private final String liNumber;
     private final String country;
-    private  String owner;
 
-    public LicensePlate(String country, String liNumber, String owner) {
+    public LicensePlate(String country, String liNumber) {
         this.liNumber = liNumber;
         this.country = country;
-        this.owner = owner;
+    }
+
+    public String getLiNumber() {
+        return this.liNumber;
+    }
     
-    }
-
-    public void setOwner(String owner) {
-        this.owner = owner;
-    }
-
-    public String getOwner() {
-        return this.owner;
-    }
-
+    
 
 
     @Override
@@ -34,21 +28,18 @@ public class LicensePlate {
 
     @Override
     public boolean equals(Object object) {
-        if(object == this) {
-            return true;
-        }
+      if(this == object) {
+        return true;
+      }
 
-        if(!(object instanceof LicensePlate)){
-            return false;
-        }
-
-        LicensePlate convertedLicensePlate = (LicensePlate) object;
-
-        if(this.liNumber.equals(convertedLicensePlate.liNumber) && this.country.equals(convertedLicensePlate.country)) {
-            return true;
-        }
-
+    if(!(object instanceof LicensePlate)) {
         return false;
+    }
+
+    LicensePlate comparedLicensePlate = (LicensePlate) object;
+
+    return this.liNumber == comparedLicensePlate.liNumber && this.country.equals(comparedLicensePlate.country);
+
     }
 
     @Override
