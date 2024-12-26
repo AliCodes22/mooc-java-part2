@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class ChangeHistory {
-    ArrayList<Double> changeHistory;
+    private ArrayList<Double> changeHistory;
 
     public ChangeHistory() {
         this.changeHistory = new ArrayList<>();
@@ -36,7 +36,7 @@ public class ChangeHistory {
 
     public double average() {
         int length = this.changeHistory.size();
-        int sum = 0;
+        double sum = 0.0;
 
         if(length == 0) {
             return 0.0;

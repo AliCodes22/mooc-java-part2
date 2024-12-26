@@ -19,7 +19,7 @@ public class ProductWarehouse extends Warehouse {
 
     @Override
     public String toString() {
-        return this.name + " : " + super.toString();
+        return this.name + ": " + super.toString();
     }
     
 }
