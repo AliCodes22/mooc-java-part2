@@ -16,6 +16,6 @@ public class Person implements Saveable {
     }
 
     public void load(String address) {
-        System.out.println(address);
+        this.address = address;
     }
 }
