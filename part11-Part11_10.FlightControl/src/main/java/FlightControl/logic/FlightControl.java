@@ -32,8 +32,8 @@ public class FlightControl {
         Flight flight = new Flight(plane, this.places.get(departureID), this.places.get(destinationID));
 
         this.flights.put(flight.toString(), flight);
-
     }
+    
 
     public Collection<Airplane> planes() {
         return this.airplanes.values();
