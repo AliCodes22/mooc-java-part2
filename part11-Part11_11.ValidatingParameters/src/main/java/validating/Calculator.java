@@ -4,6 +4,10 @@ public class Calculator {
 
     public int factorial(int num) {
 
+        if(num < 0) {
+            throw new IllegalArgumentException("Invalid argument");
+        }
+
         int answer = 1;
         for (int i = 1; i <= num; i++) {
             answer *= i;
