@@ -4,11 +4,9 @@ import application.Sensor;
 
 public class StandardSensor implements Sensor {
     private int number;
-    private boolean on;
 
     public StandardSensor(int num) {
         this.number = num;
-        this.on = true;
     }
 
     @Override
@@ -18,12 +16,11 @@ public class StandardSensor implements Sensor {
 
     @Override 
     public void setOn() {
-        this.on = true;
     }
+    
 
     @Override 
     public void setOff() {
-        return;
     }
 
     @Override
